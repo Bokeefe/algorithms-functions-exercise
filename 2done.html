@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+
+var theYear = prompt("What year do you want to check for leap?");
+if(theYear % 4 != 0) {
+  alert("it is a common year");
+} else if (theYear % 100 != 0){
+  alert("it is a leap year");
+} else if (theYear % 400 != 0){
+  alert("it is not a common year");
+} else {
+  alert("its a leap year");
+}
+// logic source Wikipedia
+	</script>
+</body>
+</html>

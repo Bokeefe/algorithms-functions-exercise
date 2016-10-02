@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+
+/*
+5. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding "ay".
+
+"The quick brown fox" -> "Hetay uickqay rownbay oxfay". 
+
+//var humanEnglish = prompt("Enter some of your people words.");
+var humanEnglish = "Here are words that need to be encrypted in pig";
+console.log(humanEnglish);
+
+var arr1 = humanEnglish.split(" ");
+function translatePigLatin(str) {
+    var strArr = [];
+    var tmpChar;
+    function isConsonant(char) {
+        return !/[aeiou]/.test(char);
+    }
+    if (!isConsonant(str.charAt(0)))
+        return str + "way";
+    else
+        strArr = str.split("");
+    while (isConsonant(strArr[0])) {
+        tmpChar = strArr.shift();
+        strArr.push(tmpChar);
+    }
+ 	return strArr.join("")+"ay";
+ 	return strArr.toLowerCase();
+}
+*/
+// test here
+		function disemvowelWord(word) {
+			var noVowels = [];
+			for (var letter of word) {
+				if (!("aeiou".includes(letter.toLowerCase()))) {
+					noVowels.push(letter);
+				}
+			}
+			return noVowels.join("");
+		}
+
+		console.log(disemvowelWord("hello") === "hll");
+		console.log(disemvowelWord("WORLD") === "WRLD");
+
+		function disemvowel(str) {
+			var noVowels = [];
+			str = str.split(" ");
+			for(var word of str) {
+				noVowels.push(disemvowelWord(word));
+			}
+			return noVowels.join(" ");
+		}
+
+		console.log(disemvowel("hello world") === "hll wrld");
+		console.log(disemvowel("aeiou and sometimes y") === " nd smtms y");
+		console.log(disemvowel("xyzzy") === "xyzzy");
+
+/*
+
+
+
+	for (var i =0; i < arr1.length; i++){
+		var arrDone = translatePigLatin(arr1[i]);
+		//arrDone = arrDone.split(" ");
+		console.log(arrDone);
+	}
+
+
+
+*/
+	</script>
+</body>
+</html>

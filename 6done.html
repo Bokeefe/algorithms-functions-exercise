@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+/*
+6. Write a function which takes in two arrays and determines if they contain the same number of the same values.
+[], [] -> true
+[2, 3, 4], [1, 2, 3] -> false
+["a", "c", "b"], ["a", "b", "c"] -> true
+[1, 1, 1], [1, 1, 1, 1] -> false
+*/
+	var arr1 = [2,5,3,5];
+	var arr2 = [2,5,4,5];
+
+function compareArr (arr1, arr2) {
+	if (arr1.join(',')=== arr2.join(',')) {
+   	return true;
+	} else {
+	return false;
+	}
+}
+
+/*
+
+This one doesn't work, is it becaus eI needed to convert them to a string?
+	var arr1 = [2,5,3,5];
+	var arr2 = [2,5,3,5];
+function equalArr (arr1,arr2) {
+		if (arr1 === arr2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+*/
+
+console.log(compareArr(arr1, arr2));
+	</script>
+
+</body>
+</html>
