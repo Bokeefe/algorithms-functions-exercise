@@ -48,6 +48,32 @@ Write two functions, called encodeSquare and decodeSquare. encodeSquare should b
 
 */
 
+			normTxt = "hello world";
+			normTxt = normTxt.split(" ");
+			normArr = [];
+			for(var i = 0; i < normTxt.length; i++){
+				normTxt[i] = normTxt[i].split("");
+			}
+				for(i = 0; i < normTxt.length; i++){
+					for(var j = 0; j < normTxt[i].length; j++){
+						normArr.push(normTxt[i][j]);
+					}
+				}
+			var sqr = Math.floor(Math.sqrt(normArr.length));
+			var sqrArr = [];
+			for(i = 0; i <= sqr; i++){
+				sqrArr[i] = normArr.splice(0,sqr);
+			}
+			codedString = "";
+			for(i = 0; i < sqr; i++){
+				for(var j = 0; j < sqrArr.length; j++){
+					if(sqrArr[j][i]){
+						codedString = codedString + sqrArr[j][i];
+					}
+				}
+				codedString = codedString + " ";
+			}
+			console.log(codedString);
 	</script>
 </body>
 </html>
