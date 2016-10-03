@@ -46,7 +46,7 @@ Write two functions, called encodeSquare and decodeSquare. encodeSquare should b
 
 (source: http://users.csc.calpoly.edu/~jdalbey/10
 
-*/
+
 
 			normTxt = "hello world";
 			normTxt = normTxt.split(" ");
@@ -74,6 +74,30 @@ Write two functions, called encodeSquare and decodeSquare. encodeSquare should b
 				codedString = codedString + " ";
 			}
 			console.log(codedString);
+			*/
+
+		var arr = [
+			["h", "a", "v", "e"],
+			["a", "n", "i", "c"],
+			["e", "d", "a", "y"],
+			["!", undefined, undefined, undefined]
+		];
+
+		function vertStr(arr) {
+			var str = "";
+			for(var i = 0; i < arr.length; i++) {
+				for(var j = 0; j < arr[i].length; j++) {
+					if (arr[j][i]) {
+						str += arr[j][i];
+					}
+				}
+				str += " ";
+			}
+			return str;
+		}
+
+		console.log(vertStr(arr));
+			}
 	</script>
 </body>
 </html>

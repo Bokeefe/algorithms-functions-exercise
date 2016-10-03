@@ -28,7 +28,7 @@ push into arr3
 
 
 
-*/
+
 
 
 
@@ -44,7 +44,32 @@ if (arr1[i]>arr2[j]){
 } else {
 	arr3 = arr2[j].push(); // but not here? .push() is not a funciton error
 }
+}
 console.log(arr1);
+*/
+
+//erty answer
+function merge (arr1,arr2) {
+	return arr1.concat(arr2).sort(function(a,b){return a-b;});
+}
+
+function merge(arr1,arr2) {
+	var i = 0;
+	var j = 0;
+	var newArr = [];
+	while (i + j <arr1.length + arr2.length) {
+		if (arr1[i] > arr2[j]) {
+			newArr.push(arr2[j]);
+			i++;
+		} else {
+			newArr.push(arr2[j]);
+			j++;
+		}
+	}
+	return newArr;
+}
+
 	</script>
+
 </body>
 </html>
