@@ -18,15 +18,26 @@ have an math.random with a floor start producing numbers and storing them in an 
 
 use .test to make sure the new number does not match one in the stored array if it does not push that number, if so, generate new number.
 */
-var arr = [];
+
+
+
 	for(var i = 0; i < 10 ; i++) {
-		function rando (x) {
-			var x = Math.floor(Math.random() * 100);
+		function rando () {
+			var i = 0;
+			var arr = [];
+			while (i < 10){
+			x = Math.floor(Math.random() * 100);
+			if (arr.indexOf(x) == -1) {
+				arr = arr.concat(x);
+				}
+			i++;
 		}
+		return arr;
+	}
 		
 };
 
-console.log(arr);
+console.log(rando());
 	
 
 	</script>
