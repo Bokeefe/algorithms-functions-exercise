@@ -12,16 +12,18 @@
 [1,2,3,4,5,6,7,8], 4 -> [1,2,3,4,4,4,4,4]
 [1,5,7,3,1,5,7], 3 -> [1,3,3,3,1,3,3]
 */
+
+var arr = [3,5,7,3,6,3,65,78,3,6,2];
+
 function cutFunct (arr, maxCutoff) {
 	for (var i = 0; i < arr.length; i++) {
 		if(arr[i] > maxCutoff){
-			//replace i with maxCutoff;
 			arr[i]=maxCutoff;
-
 		}
 	} return arr;
 }
-console.log(cutFunct([1,2,3,4,5,6,7,8],4));
+console.log(cutFunct(arr,6));
+
 	</script>
 
 </body>

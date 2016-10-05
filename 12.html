@@ -24,12 +24,13 @@ fj 2.00%
 
 
 	for (var i = 0; i < arr.length; i++){
-	var arr2 = arr2.concat(arr[i]);
+		arr2.push(arr[i]);
 	}
 	
 //Why doesn't this array start printing at the 1 place in the array?
-	for (j = 0; j < arr.length; j++){
-	var arr3 = arr2.concat(arr[j]);
+//its beacuse oof concat, push
+	for (j = 1; j < arr.length; j++){
+		arr3.push(arr[j]);
 	}
 
 		

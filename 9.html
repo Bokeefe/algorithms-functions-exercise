@@ -26,14 +26,14 @@ function mergerSorter (arr1,arr2) {
 	var arrSort = [];
 	while(i + p < arr1.length + arr2.length) {
 		if (arr1[i] > arr2[p]) {
-			arrSort.push(arr2[p]); //not sorted
+			arrSort.push(arr2[i]); //not sorted
 			i++;
 		} else {
-			arrSort.push(arr2[p]);//i don't get why these are undefined
+			arrSort.push(arr1[p]);//i don't get why these are undefined
 			p++;
 		}
 	}
-	return arrSort.sort(arrSort);
+	return arrSort;
 }
 
 console.log(mergerSorter(arr1,arr2));
