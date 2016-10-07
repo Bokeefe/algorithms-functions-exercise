@@ -23,9 +23,8 @@ use .test to make sure the new number does not match one in the stored array if 
 
 	for(var i = 0; i < 10 ; i++) {
 		function rando () {
-			var i = 0;
 			var arr = [];
-			while (i < 10){
+			for (var i = 0; i < 10; i++){
 			x = Math.floor(Math.random() * 100);
 			if (arr.indexOf(x) == -1) {
 				arr = arr.concat(x);
