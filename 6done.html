@@ -15,32 +15,21 @@
 [1, 1, 1], [1, 1, 1, 1] -> false
 */
 	var arr1 = [2,5,3,5];
-	var arr2 = [2,5,4,5];
+	var arr2 = [2,3,5,5];
 
-function compareArr (arr1, arr2) {
-	if (arr1.join(',')=== arr2.join(',')) {
-   	return true;
-	} else {
-	return false;
-	}
-}
-
-/*
-
-This one doesn't work, is it becaus eI needed to convert them to a string?
-	var arr1 = [2,5,3,5];
-	var arr2 = [2,5,3,5];
-function equalArr (arr1,arr2) {
-		if (arr1 === arr2) {
+function compArr(arr1,arr2) {
+	for (var i = 0; i < arr1.length; i++) {
+		if (arr2.includes(arr1[i])){
 			return true;
 		} else {
 			return false;
 		}
 	}
-*/
+}
 
-console.log(compareArr(arr1, arr2));
+console.log(compArr(arr1,arr2));
 	</script>
+
 
 </body>
 </html>

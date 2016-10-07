@@ -7,20 +7,26 @@
 <body>
 	<script>
 
-
+var i = 0;
 var theYear = prompt("What year do you want to check for leap?");
 
-if (theYear % 4 != 0) {
-	alert("it is a common year");
-} else if (theYear % 100 != 0){
-	alert("it is a leap year");
-} else if (theYear % 400 != 0){
-	alert("it is not a common year");
-} else {
-	alert("its a leap year");
-}
+
+	function leapYear (takesYear){
+		if (takesYear % 4 != 0) {
+			alert("it is a common year");
+		} else if (takesYear % 100 != 0){
+			alert("it is a leap year");
+		} else if (takesYear % 400 != 0){
+			alert("it is not a common year");
+		} else {
+			alert("its a leap year");
+		}
+	}
+
+leapYear(theYear);
 
 // logic source Wikipedia
+
 	</script>
 </body>
 </html>

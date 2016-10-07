@@ -12,35 +12,36 @@
 
 "The quick brown fox" -> "Hetay uickqay rownbay oxfay". 
 */
-//var humanEnglish = prompt("Enter some of your people words.");
+
 var humanEnglish = prompt("Enter some of your people words:");
-console.log(humanEnglish);
 
-var arr1 = humanEnglish.split(" ");
-function translatePigLatin(str) {
-    var strArr = [];
-    var tmpChar;
-    function isConsonant(char) {
-        return !/[aeiou]/.test(char);
+oneString = "";
+function bigPig (wordsToTranslate) {
+    var arr1 = wordsToTranslate.split(" ");
+    function translatePigLatin(str) {
+        var strArr = [];
+        var tmpChar;
+        function isConsonant(char) {
+            return !/[aeiou]/.test(char);
+        }
+        if (!isConsonant(str.charAt(0)))
+            return str + "way";
+        else
+            strArr = str.split("");
+        while (isConsonant(strArr[0])) {
+            tmpChar = strArr.shift();
+            strArr.push(tmpChar);
+        }
+     	return strArr.join("")+"ay";
+     	return strArr.toLowerCase();
+        }
+    	var oneString = "";
+    	for (var i =0; i < arr1.length; i++){
+    	   oneString += translatePigLatin(arr1[i]) + " ";
+        }
+        return oneString;
     }
-    if (!isConsonant(str.charAt(0)))
-        return str + "way";
-    else
-        strArr = str.split("");
-    while (isConsonant(strArr[0])) {
-        tmpChar = strArr.shift();
-        strArr.push(tmpChar);
-    }
- 	return strArr.join("")+"ay";
- 	return strArr.toLowerCase();
-}
-//the main function was from StackOverflow but didn't translate sentences
-		var oneString = "";
-	for (var i =0; i < arr1.length; i++){
-		oneString += translatePigLatin(arr1[i]) + " ";
-	}
-
-alert(oneString);
+alert(bigPig(humanEnglish));
 
 	</script>
 </body>
